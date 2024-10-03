@@ -13,11 +13,6 @@ O teste inclui um conjunto de dados sobre alunos e escolas da cidade de São Pau
 Este teste oferece acesso a um conjunto de dados relacionados à educação pública na cidade de São Paulo. Os dados incluem:
 
 * **Matrículas** : Mais de 10.000 alunos matriculados em escolas públicas municipais.
-* **Benefícios Recebidos** : Informações detalhadas sobre os auxílios concedidos aos alunos, como valores por categoria e a frequência de recebimento.
-* **Comparação com Escolas Privadas** : Dados comparativos sobre as ofertas de benefícios em instituições privadas.
-* **Informações Demográficas** : Dados sobre a idade, localização e nível educacional dos alunos.
-* **Programas Educacionais** : Detalhes de iniciativas governamentais e programas voltados à educação pública.
-* **Desempenho Acadêmico** : Histórico completo de desempenho escolar dos alunos, abrangendo avaliações e progresso.
 
 ### Links Úteis:
 
