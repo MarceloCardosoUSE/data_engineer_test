@@ -53,4 +53,5 @@ df_aluno_pri = df_aluno_pri.replace({
 
 df_all = pd.concat([df_prof, df_alunos, df_prof_pri, df_aluno_pri], axis=0)
 df_all = df_all.rename(columns={"Nome": "Categoria", "Matrículas": "Total_Matriculas"})
+df_all.to_csv('data/silver/matriculas_sp_escolas.csv', index=False)
 print(df_all)

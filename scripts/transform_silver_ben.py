@@ -35,4 +35,5 @@ df_uniforme['categoria'] = 'Uniforme'
 
 # Concatenando os dois DataFrames
 df = pd.concat([df_material, df_uniforme], ignore_index=True)
+df.to_csv('data/silver/auxilio_materiais.csv', index=False)
 print(df)
