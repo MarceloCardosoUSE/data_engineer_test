@@ -35,5 +35,11 @@ df_uniforme['categoria'] = 'Uniforme'
 
 # Concatenando os dois DataFrames
 df = pd.concat([df_material, df_uniforme], ignore_index=True)
+last_index = df.index[-1]
+
+# Remover o símbolo 'R$', substituir a vírgula por ponto e converter para float apenas na última linha
+df.loc[last_index, 'valor'] = df.loc[last_index, 'valor'].replace('R$', '').replace(',', '.').strip()
+df.loc[last_index, 'valor'] = float(df.loc[last_index, 'valor'])
+
 df.to_csv('data/silver/auxilio_materiais.csv', index=False)
 print(df)

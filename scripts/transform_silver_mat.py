@@ -8,12 +8,12 @@ df = df.drop(index=0)
 df = df.drop(index=11)
 
 #cria dataframe somente com os dados de professores
-idex_prof = [1, 2,3]
+idex_prof = [1, 2, 3]
 df_prof = df.loc[idex_prof]
 df_prof = df_prof.replace({
     "Anos iniciais": "total_professores_inicial", 
     "Anos finais": "total_professores_finais", 
-    "Ensino médio": "total_professores_medio"
+    "Ensino Médio": "total_professores_medio"
 })
 
 #cria dataframe somente com os dados de alunos
@@ -35,8 +35,10 @@ df_prof_pri = df.loc[idex_prof]
 df_prof_pri = df_prof_pri.replace({
     "Anos iniciais": "total_professores_inicial", 
     "Anos finais": "total_professores_finais", 
-    "Ensino médio": "total_professores_medio"
+    "Ensino Médio": "total_professores_medio"
 })
+
+
 
 #criar dataframe com dados alunos escolas privadas
 idex_alunos = [15, 16, 17, 18, 19, 20, 21]
