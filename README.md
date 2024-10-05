@@ -23,17 +23,16 @@ Seria interessante, após essa etapa, implementar tecnologias como Apache Airflo
 
 
 ### **Trasnformação dos Dados**
-Foi utilizada a Medallion Architecture para extrair, transformar e carregar os dados deste projeto. Na estrutura do projeto, na pasta `/Data`, existem três camadas que armazenam os dados:
+Na estrutura do projeto, na pasta `/Data`, existem três camadas que armazenam os dados:
+Cada Etapa do projeto foi feita uma 
 
-Camada Bronze: Armazena os dados brutos extraídos do web scraping.
+Camada Bronze: Esta camada extraímos e armazenamos os dados brutos extraídos do webscraping. Os dados ainda estão em seus formatos originais, como JSON e CSV.
 
-Camada Silver: Contém os dados transformados, estruturados em DataFrames, com tabelas e colunas padronizadas. Nessa camada, também são realizadas a renomeação das colunas e a padronização dos dados.
+Camada Silver: Esta camada os dados são transformados utilizando a biblioteca `Pandas` do Python. Os arquivos em `JSON` e `CSV` são convertidos para DataFrames, onde ocorre a padronização estrutural das tabelas e colunas. As colunas são renomeadas para garantir consistência, e os dados passam por processos de limpeza e padronização, como tratamento de valores nulos, conversões de tipos e normalização de formatos.
 
-Camada Gold:Armazena uma cópia do banco de dados SQLite, onde todos os dados estão tratados e prontos para uso. Nesta camada, também existem datasets que auxiliam o time de BI a consumir e criar visualizações.
+Camada Gold: Esta camada armazena uma cópia do banco de dados SQLite, onde os dados já foram completamente tratados, limpos e estão prontos para consumo.
 
 A pasta `/scripts`: está com todos os arquivos contendo as transformações de dados.
-
-
 
 
 ### **Load dos Dados**
