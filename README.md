@@ -14,7 +14,8 @@ O Segundo Site foi o [Portal de Uniformes](https://portaldeuniformes.sme.prefeit
 Após a extração dos dados Brutos, foi gerado um CSV e JSON e foi armazenado na camada Bronze.
 
 ### **Arquitetura usada:** Medallion Architecture
-[Imagem, exemplo da arquitetura:](/arquitetura.png)
+<img src="/arquitetura.png" alt="Imagem, exemplo da arquitetura">
+
 
 ### **Trasnformação dos Dados**
 Foi utilizada a Medallion Architecture para extrair, transformar e carregar os dados deste projeto. Na estrutura do projeto, na pasta `/Data`, existem três camadas que armazenam os dados:
@@ -38,4 +39,15 @@ O Script está localizado em: `/scripts/create_database.py`
 Após o tratamento dos dados, foi realizado o carregamento (load) em um banco de dados SQLite estruturado, também nomeado test_engineer.db.
 O Script está localizado em:`/scripts/transform_gold.py`
 
+### **Datasets Usando SQL**
+
+Foi desenvolvido dois datasets para otimizar o consumo de dados pelo time de BI, utilizando Common Table Expressions (CTEs). O uso de CTEs no SQL permite uma melhor organização e legibilidade das consultas, facilitando a implementação de regras de negócios pré-determinadas. As CTEs proporcionam uma maneira eficaz de estruturar consultas complexas, permitindo que subconsultas sejam referenciadas de forma clara e eficiente, sem a necessidade de duplicação de código.
+
+Após a definição das CTEs, os dados tratados foram armazenados em duas tabelas distintas no banco de dados. Este armazenamento facilita a consulta e a análise subsequente, garantindo que os dados estejam organizados de acordo com as necessidades do time de BI e atendam às regras de negócios estabelecidas.
+
+nome da Tabelas criada via CTEs: `percentual_matriculas e top_categorias_por_tipo_escola`
+
+#### ***As CTEs tem como objetivo:***
+Definir as categorias com maior número de matrículas por tipo de escola.
+Visualizar a Distribuição de matrículas por categoria e escola, com percentuais.
 
