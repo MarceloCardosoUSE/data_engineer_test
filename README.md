@@ -14,6 +14,11 @@ O Segundo Site foi o [Portal de Uniformes](https://portaldeuniformes.sme.prefeit
 Após a extração dos dados Brutos, foi gerado um CSV e JSON e foi armazenado na camada Bronze.
 
 ### **Arquitetura usada:** Medallion Architecture
+Neste projeto, utilizei a Arquitetura Medallion, que permite uma organização eficiente dos dados em camadas de Bronze, Prata e Ouro, facilitando a ingestão, transformação e consumo dos dados. No entanto, vale ressaltar que essa abordagem pode ser complementada pela Arquitetura de Lake House, que combina as vantagens dos Data Lakes e Data Warehouses. Essa combinação proporciona uma maior escalabilidade e flexibilidade, permitindo o uso de serviços de nuvem, como o AWS S3, para armazenar e gerenciar dados em diferentes estágios do pipeline.
+
+optei por implementar uma arquitetura mais manual neste momento, organizando os dados em pastas e camadas de forma clara. Essa abordagem proporciona flexibilidade e controle sobre o processo do ETL, permitindo um melhor entendimento das etapas. 
+
+Seria interessante, após essa etapa, implementar tecnologias como Apache Airflow para automatizar e orquestrar todo o processo de ETL.
 <img src="/arquitetura.png" alt="Imagem, exemplo da arquitetura">
 
 
